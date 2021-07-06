@@ -20,20 +20,14 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         register = findViewById(R.id.register);
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
-                finish();
-            }
+        login.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this,RegisterActivity.class));
+            finish();
         });
 
-        register.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
+        register.setOnClickListener(v -> {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 finish();
-            }
         });
     }
 
